@@ -1,0 +1,101 @@
+---
+import HeaderBtn from "../components/Header-btn.astro";
+---
+
+<header id="header" class="max-h-[70px] w-full relative z-10 top-0 left-0">
+  <nav
+    class="px-8 flex h-[70px] flex-row justify-between font-bold items-center"
+  >
+    <img
+      class="bject-cover h-full"
+      src="../../public/logo/roofing.png"
+      alt="logo"
+      class="h-full"
+    />
+    <div class="menu">
+      <HeaderBtn title="Home" source="/" />
+      <HeaderBtn title="About us" source="/" />
+      <HeaderBtn title="Services" source="/" />
+      <HeaderBtn title="Gallery" source="/" />
+    </div>
+    <div class="hamburguer">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    transition: all ease-in-out 0.5s;
+  }
+
+  .hamburguer {
+    display: none;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(35, 35, 35);
+  }
+
+  @media (max-width: 768px) {
+    .hamburguer {
+      display: block;
+    }
+    .hamburguer.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      row-gap: 10px;
+      flex-direction: column;
+      background-color: #ffffff;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      transition: all ease-in-out 0.3s;
+    }
+
+    .menu.active {
+      left: 0;
+    }
+  }
+</style>
+
+<script>
+  const hamburguer = document.querySelector(".hamburguer");
+  const menu = document.querySelector(".menu");
+
+  hamburguer?.addEventListener("click", () => {
+    hamburguer.classList.add("active");
+    menu!.classList.add("active");
+  });
+
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("header");
+    if (window.scrollY > 50) {
+      header!.classList.remove("bg-transparent");
+      header!.classList.add("bg-white", "shadow-lg", "sticky");
+    } else {
+      header!.classList.remove("bg-white", "shadow-lg", "sticky");
+      header!.classList.add("bg-transparent");
+    }
+  });
+</script>
