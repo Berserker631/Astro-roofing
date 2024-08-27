@@ -2,7 +2,7 @@ import ImageSlider from "./ImageSlider";
 
 const App = () => {
   const slides = [
-    { url: "https://euphonious-sprinkles-624dce.netlify.app/public/1.jpg", title: "roof", order: 1},
+    { url: "./1.jpg", title: "roof", order: 1},
   //  { url: "https://euphonious-sprinkles-624dce.netlify.app/public/2.jpg", title: "roof", order: 1},
   //  { url: "https://euphonious-sprinkles-624dce.netlify.app/public/3.jpg", title: "roof", order: 1},
  //   { url: "https://euphonious-sprinkles-624dce.netlify.app/public/4.jpg", title: "roof", order: 1},
