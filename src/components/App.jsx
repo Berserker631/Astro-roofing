@@ -3,12 +3,9 @@ import ImageSlider from "./ImageSlider";
 const App = () => {
   const slides = [
     { url: "./1.jpg", title: "roof", order: 1},
-  //  { url: "https://euphonious-sprinkles-624dce.netlify.app/public/2.jpg", title: "roof", order: 1},
-  //  { url: "https://euphonious-sprinkles-624dce.netlify.app/public/3.jpg", title: "roof", order: 1},
- //   { url: "https://euphonious-sprinkles-624dce.netlify.app/public/4.jpg", title: "roof", order: 1},
-//    { url: "./public/2.jpg", title: "roof", order: 2},
- //   { url: "public/3.jpg", title: "roof", order: 3},
-   // { url: "../../public/4.jpg", title: "roof", order: 4},
+    { url: "./2.jpg", title: "roof", order: 1},
+    { url: "./3.jpg", title: "roof", order: 1},
+    { url: "./4.jpg", title: "roof", order: 1},
   ];
   const containerStyles = {
     width: "100%",
