@@ -1,67 +1,44 @@
 import { useState, useEffect } from "react";
 
-const rightArrowStyles = {
-  display: "none",
-  position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  right: "32px",
-  fontSize: "45px",
-  color: "#fff",
-  zIndex: 1,
-  cursor: "pointer",
-};
-
-const leftArrowStyles = {
-  display: "none",
-  position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  left: "32px",
-  fontSize: "45px",
-  color: "#fff",
-  zIndex: 1,
-  cursor: "pointer",
-};
-
 const sliderStyles = {
   position: "relative",
   height: "100vh",
 };
 
-const dotsContainerStyles = {
-  display: "flex",
-  justifyContent: "center",
-};
-
-const dotStyle = {
-  margin: "0 3px",
-  cursor: "pointer",
-  fontSize: "20px",
-};
-
-const text = {
-  textAlign: "center",
+const top = {
+  textAlign: "start",
+  fontSize: "large",
   margin: "5px",
-  fontFamily: "Roboto, sans-serif",
-  fontWeight: 850,
-  color: "#E1261D",
+  fontWeight: 700,
+  color: "#999999",
   fontStyle: "bold",
-  textShadow: "3px 3px rgba(0, 0, 0, 0.3)",
-  fontSize: "6vw",
-  maxFontSize: "6vw"
+  paddingLeft: "10px",
+  fontFamily: "Roboto, sans-serif",
+  textShadow: "3px 3px rgba(0, 0, 0, 0.3)"
+
 }
 
-const body = {
-  textAlign: "center",
-  fontSize: "3vw",
+const mid = {
+  textAlign: "start",
+  fontSize: "3em",
   margin: "0",
-  fontFamily: "Roboto, sans-serif",
+  fontFamily: "DM Serif Text, serif",
   fontWeight: 700,
-  color: "#fff",
+  color: "#f3620a",
   paddingLeft: "10px",
   fontStyle: "bolder",
+  textShadow: "2px 2px rgba(0, 0, 0, 0.3)"
+}
+
+const bottom = {
+  textAlign: "start",
+  fontSize: "x-large",
+  margin: "0",
+  color: "#fff",
+  fontFamily: "Roboto, sans-serif",
+  paddingLeft: "10px",
   textShadow: "3px 3px rgba(0, 0, 0, 0.3)"
+
 }
 
 const leyend = {
@@ -69,31 +46,31 @@ const leyend = {
   zIndex: 4,
   padding: "5px",
   position: "absolute",
-  top: "15rem",
-  left: "0",
-  backgroundColor: 'transparent',
-  width: "100%",
-  height: "17em",
+  top: "35%",
+  left: "10%",
+  width: "40vw",
+  height: "35em",
+}
+
+const contact = {
+  backgroundColor: "#E1261D",
+  color: "#fff",
+  fontStyle: "bold",
+  fontSize: "large",
+  shadowBox: "3px 3px rgba(0, 0, 0, 0.3)",
+  padding: "10px 25px",
+  margin: "10px",
+  borderRadius: "5px"
 }
 
 
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
   const goToNext = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
   };
 
   useEffect(() => {
@@ -106,30 +83,18 @@ const ImageSlider = ({ slides }) => {
 
   return (
     <div style={sliderStyles}>
-      <div>
-        <div onClick={goToPrevious} style={leftArrowStyles}>
-          ❰
-        </div>
-        <div onClick={goToNext} style={rightArrowStyles}>
-          ❱
-        </div>
         <div style={leyend} >
-          <h1 style={text}>BUILDING PROTECTION</h1>
-          <h2 style={body}>ROOF TO ROOF</h2>
+          <h1 style={top}>BUILDING PROTECTION</h1>
+          <h2 style={mid}>Expertos en techos de calidad</h2>
+          <p style={bottom}>
+            Resolvemos cualquier problema con su techo, desde pequeñas fugas hasta daños
+            importantes causados por tormentas. Ya sea que necesite una reparación rápida, 
+            una instalación completa o un servicio de mantenimiento regular.</p>
+            <button style={contact}>Contact us</button>
         </div>
-      </div>
-        <img src={slides[currentIndex].url} alt={`Slide ${currentIndex + 1}`} style={{ height: '100%', width: '100%', objectFit: 'cover', objectPosition: '0% 0%' }}/>
-      <div style={dotsContainerStyles}>
-        {slides.map((x) => (
-          <div
-            style={dotStyle}
-            key={x.order}
-            onClick={() => goToSlide(x.order)}
-          >
-          </div>
-        ))}
-      </div>
+        <img src={slides[currentIndex].url} alt={`Slide ${currentIndex + 1}`} style={{ height: '100%', width: '100%', objectFit: 'cover', objectPosition: '50% 50%' }}/>
     </div>
   );
 };
+
 export default ImageSlider;

@@ -1,11 +1,12 @@
 import ImageSlider from "./ImageSlider";
+import "./imageSlider.css";
 
 const App = () => {
   const slides = [
-    { url: "./1.jpg", title: "roof", order: 1},
-    { url: "./2.jpg", title: "roof", order: 1},
-    { url: "./3.jpg", title: "roof", order: 1},
-    { url: "./4.jpg", title: "roof", order: 1},
+    { url: "./material/1.jpg", title: "roof", order: 1},
+    { url: "./material/2.jpg", title: "roof", order: 2},
+    { url: "./material/3.jpg", title: "roof", order: 3},
+    { url: "./material/4.jpg", title: "roof", order: 4},
   ];
   const containerStyles = {
     width: "100%",
@@ -13,7 +14,7 @@ const App = () => {
     margin: "0",
   };
   return (
-      <div style={containerStyles}>
+      <div style={containerStyles} className="image-container">
         <ImageSlider slides={slides}/>
       </div>
   );

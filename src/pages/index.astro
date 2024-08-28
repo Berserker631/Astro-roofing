@@ -4,6 +4,7 @@ import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Blank from "../components/Blank.astro";
 import App from "../components/App";
+import Gallery from "../components/Gallery.astro";
 ---
 
 <!doctype html>
@@ -20,10 +21,12 @@ import App from "../components/App";
         <App client:load />
         <br />
         <div class="content">
-          <Blank
+          <Gallery />
+          <!-- <Blank
             title="NUESTROS SERVICIOS"
             body="Nos encargamos de cualquier problema con su techo, desde pequeñas fugas hasta daños graves. Ofrecemos reparaciones, instalaciones y mantenimiento con soluciones confiables y duraderas, restaurando la integridad y funcionalidad de su techo de manera eficiente."
-          />
+          /> -->
+          <h1 style="text-align: center;">Our Services</h1>
           <section class="card-container">
             <Card
               title="Reparacion de techos"
@@ -46,7 +49,6 @@ import App from "../components/App";
               body="Ofrecemos una amplia gama de opciones de materiales y estilos para adaptarse a sus necesidades y preferencias estéticas"
             />
           </section>
-          <Blank />
         </div>
       </div>
     </Layout>
@@ -55,7 +57,7 @@ import App from "../components/App";
 
 <style>
   .wrapper {
-    margin-top: -70px;
+    margin-top: -80px;
     display: block;
     flex-grow: 1;
     width: 100%;
@@ -73,6 +75,7 @@ import App from "../components/App";
     justify-content: space-around;
     box-sizing: border-box;
     width: 100%;
+    padding: 25px;
     height: max-content;
   }
 

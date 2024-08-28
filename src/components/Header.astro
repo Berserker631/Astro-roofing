@@ -1,23 +1,32 @@
 ---
-import HeaderBtn from "../components/Header-btn.astro";
+
 ---
 
-<header id="header" class="max-h-[70px] w-full relative z-10 top-0 left-0">
+<header id="header" class="max-h-[80px] w-full relative z-10 top-0 left-0">
   <nav
-    class="px-8 flex h-[70px] flex-row justify-between font-bold items-center"
+    class="px-2 flex box-border bg-white h-[80px] flex-row justify-between font-bold items-center"
   >
     <img
       class="bject-cover h-full"
-      src="./logo/roofing.png"
+      src="../../public/logo/roofing.png"
       alt="logo"
       class="h-full"
     />
     <div class="menu">
-      <HeaderBtn title="Home" source="/" />
-      <HeaderBtn title="About us" source="/" />
-      <HeaderBtn title="Services" source="/" />
-      <HeaderBtn title="Gallery" source="/" />
+      <a class="nav-button" href="/">
+        <span>Home</span>
+      </a>
+      <a class="nav-button" href="/about">
+        <span>About us</span>
+      </a>
+      <a class="nav-button" href="/">
+        <span>Services</span>
+      </a>
+      <a class="nav-button" href="/">
+        <span>Gallery</span>
+      </a>
     </div>
+    <span></span>
     <div class="hamburguer">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -28,12 +37,26 @@ import HeaderBtn from "../components/Header-btn.astro";
 
 <style>
   header {
-    transition: all ease-in-out 0.5s;
   }
 
   .hamburguer {
     display: none;
     cursor: pointer;
+  }
+
+  .nav-button {
+    display: inline-flex;
+    line-height: 80px;
+    height: 80px;
+    font-weight: 500;
+    color: #000;
+    padding: 0 12px;
+    transition: all ease-in-out 0.2s;
+  }
+
+  .nav-button:hover {
+    color: #fff;
+    background-color: rgb(234, 88, 12);
   }
 
   .bar {
@@ -68,6 +91,7 @@ import HeaderBtn from "../components/Header-btn.astro";
       flex-direction: column;
       background-color: #ffffff;
       width: 100%;
+      color: #000;
       text-align: center;
       color: #fff;
       transition: all ease-in-out 0.3s;
@@ -92,9 +116,9 @@ import HeaderBtn from "../components/Header-btn.astro";
     const header = document.getElementById("header");
     if (window.scrollY > 50) {
       header!.classList.remove("bg-transparent");
-      header!.classList.add("bg-white", "shadow-lg", "sticky");
+      header!.classList.add("shadow-lg", "sticky");
     } else {
-      header!.classList.remove("bg-white", "shadow-lg", "sticky");
+      header!.classList.remove("shadow-lg", "sticky");
       header!.classList.add("bg-transparent");
     }
   });
