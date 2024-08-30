@@ -4,7 +4,8 @@ import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Blank from "../components/Blank.astro";
 import App from "../components/App";
-import Gallery from "../components/Gallery.astro";
+import Tile from "../components/Tile.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -21,22 +22,18 @@ import Gallery from "../components/Gallery.astro";
         <App client:load />
         <br />
         <div class="content">
-          <Gallery />
-          <!-- <Blank
-            title="NUESTROS SERVICIOS"
-            body="Nos encargamos de cualquier problema con su techo, desde pequeñas fugas hasta daños graves. Ofrecemos reparaciones, instalaciones y mantenimiento con soluciones confiables y duraderas, restaurando la integridad y funcionalidad de su techo de manera eficiente."
-          /> -->
-          <h1 style="text-align: center;">Our Services</h1>
+          <Tile />
+
           <section class="card-container">
             <Card
               title="Reparacion de techos"
-              body="Resolvemos cualquier problema con su techo, desde pequeñas fugas, hasta daños importantes"
+              body="Resolvemos todo tipo de problemas en su techo, desde pequeñas fugas hasta daños mayores."
               ico="fix-roof"
             />
             <Card
               ico="health"
               title="Techos de emergencia"
-              body="Ofrecemos servicios de reparación de techos de emergencia para resolver problemas críticos de manera rápida y efectiva, sin importar el momento."
+              body="Ofrecemos servicios de reparación de techos de emergencia para resolver problemas críticos de forma rápida y efectiva, en cualquier momento."
             />
             <Card
               ico="protect"
@@ -46,11 +43,12 @@ import Gallery from "../components/Gallery.astro";
             <Card
               ico="ins-roof"
               title="Instalación de Techos"
-              body="Ofrecemos una amplia gama de opciones de materiales y estilos para adaptarse a sus necesidades y preferencias estéticas"
+              body="Ofrecemos una variedad de materiales y estilos para adaptarnos a sus necesidades y preferencias estéticas."
             />
           </section>
         </div>
       </div>
+      <Footer />
     </Layout>
   </body>
 </html>

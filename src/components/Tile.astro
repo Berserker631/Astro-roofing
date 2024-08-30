@@ -1,0 +1,43 @@
+---
+import TileItem from "./TileItem.astro";
+
+const { title, body, subTitle } = Astro.props;
+---
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-3 text-white">
+        NUESTROS SERVICIOS
+      </h1>
+      <p class="mx-auto leading-relaxed text-base text-slate-400">
+        En La Florida, donde la belleza natural se mezcla con climas extremos,
+        su techo es la primera línea de defensa para proteger su hogar o
+        negocio. En Roofing 101, no solo reparamos techos, ofrecemos soluciones
+        robustas y duraderas diseñadas específicamente para resistir las
+        condiciones únicas de la región. Confíe en nosotros y nuestros servicios
+        para mantener la integridad de su techo y la tranquilidad de su hogar.
+      </p>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <TileItem
+        title="Proteccion para techos planos"
+        subTitle="Coating"
+        body="En Roofing 101 Corp, ofrecemos un servicio especializado de Coating Silicone para techos planos, diseñado para proporcionar una capa protectora duradera y resistente a los elementos, Descubra los Beneficios del Coating Silicone."
+        source="/material/coating.jpeg"
+      />
+      <TileItem
+        title="Proteccion para techos planos"
+        subTitle="Techos planos"
+        body="Nuestra experiencia local nos permite proporcionar soluciones adaptadas a las necesidades únicas de la región, Respondemos rápidamente para minimizar los daños y devolver la protección a su hogar."
+        source="/material/flatroof.jpg"
+      />
+      <TileItem
+        title="Reparacion Tejas"
+        subTitle="Reparacion de Techos de tejas"
+        body="Trabajamos con una variedad de materiales de techo, incluyendo tejas de todo tipo. Nuestro equipo está capacitado para reparar o reemplazar secciones dañadas, asegurando la integridad estructural y estética de su techo."
+        source="/material/tiles.jpg"
+      />
+    </div>
+  </div>
+</section>

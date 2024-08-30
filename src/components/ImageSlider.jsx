@@ -10,7 +10,7 @@ const top = {
   fontSize: "large",
   margin: "5px",
   fontWeight: 700,
-  color: "#999999",
+  color: "#cacaca",
   fontStyle: "bold",
   paddingLeft: "10px",
   fontFamily: "Roboto, sans-serif",
