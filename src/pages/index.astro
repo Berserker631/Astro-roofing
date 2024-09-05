@@ -1,11 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import Header from "../components/Header.astro";
-import Blank from "../components/Blank.astro";
 import App from "../components/App";
 import Tile from "../components/Tile.astro";
 import Footer from "../components/Footer.astro";
+import About from "../components/about-component.astro";
 ---
 
 <!doctype html>
@@ -17,7 +16,6 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <Layout title="Home">
-      <Header />
       <div class="wrapper">
         <App client:load />
         <br />
@@ -47,6 +45,7 @@ import Footer from "../components/Footer.astro";
             />
           </section>
         </div>
+        <About />
       </div>
       <Footer />
     </Layout>

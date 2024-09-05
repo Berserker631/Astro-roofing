@@ -14,7 +14,7 @@ const top = {
   fontStyle: "bold",
   paddingLeft: "10px",
   fontFamily: "Roboto, sans-serif",
-  textShadow: "3px 3px rgba(0, 0, 0, 0.3)"
+  textShadow: "3px 3px rgba(0, 0, 0, 0.4)"
 
 }
 
@@ -24,22 +24,22 @@ const mid = {
   margin: "0",
   fontFamily: "DM Serif Text, serif",
   fontWeight: 700,
-  color: "#f3620a",
+  color: "#fff",
   paddingLeft: "10px",
   fontStyle: "bolder",
   textShadow: "2px 2px rgba(0, 0, 0, 0.3)"
 }
 
-const bottom = {
-  textAlign: "start",
-  fontSize: "x-large",
-  margin: "0",
-  color: "#fff",
-  fontFamily: "Roboto, sans-serif",
-  paddingLeft: "10px",
-  textShadow: "3px 3px rgba(0, 0, 0, 0.3)"
+// const bottom = {
+//   textAlign: "start",
+//   fontSize: "x-large",
+//   margin: "0",
+//   color: "#fff",
+//   fontFamily: "Roboto, sans-serif",
+//   paddingLeft: "10px",
+//   textShadow: "3px 3px rgba(0, 0, 0, 0.3)"
 
-}
+// }
 
 const leyend = {
   boxSizing: "border-box",
@@ -84,12 +84,12 @@ const ImageSlider = ({ slides }) => {
   return (
     <div style={sliderStyles}>
         <div style={leyend} >
-          <h1 style={top}>BUILDING PROTECTION</h1>
-          <h2 style={mid}>Expertos en techos de calidad</h2>
-          <p style={bottom}>
+          <h3 style={top}>BUILDING PROTECTION</h3>
+          <h1 style={mid}>Expertos en techos de calidad</h1>
+          {/* <p style={bottom}>
             Resolvemos cualquier problema con su techo, desde pequeñas fugas hasta daños
             importantes causados por tormentas. Ya sea que necesite una reparación rápida, 
-            una instalación completa o un servicio de mantenimiento regular.</p>
+            una instalación completa o un servicio de mantenimiento regular.</p> */}
             <button style={contact}>Contact us</button>
         </div>
         <img src={slides[currentIndex].url} alt={`Slide ${currentIndex + 1}`} style={{ height: '100%', width: '100%', objectFit: 'cover', objectPosition: '50% 50%' }}/>
