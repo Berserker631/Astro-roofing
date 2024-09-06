@@ -4,17 +4,16 @@ const path = "./icons/" + ico + ".png";
 ---
 
 <div
-  class="flex items-center flex-col relative w-72 rounded mb-2"
-  id="card-container"
+  class="flex relative flex-col md:w-[20%] w-[100%] h-[28vh] md:h-[20vh] rounded mb-2 border-[solid] justify-center"
 >
   <img
-    class="w-[80px] mb-5 transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover: filter"
+    class="w-[40px] absolute left-[45%] top-0 md:-top-1 md:-left-0 p-1 bg-white rounded-[50%] transition-all duration-300 ease-in-out hover:scale-110"
     src={path}
     alt="fix"
   />
-  <h1 class="font-bold text-center m-auto text-lg">{title}</h1>
+  <h1 class="font-bold text-center md:text-start text-lg">{title}</h1>
   <p
-    class="text-[#999999] text-justify font-light text-base"
+    class="text-[#999999] text-center md:text-balance font-light text-base"
     style="font-family: Arial, Helvetica, sans-serif;"
   >
     {body}
@@ -29,7 +28,6 @@ const path = "./icons/" + ico + ".png";
 
 <style>
   h1 {
-    text-align: center;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
   }

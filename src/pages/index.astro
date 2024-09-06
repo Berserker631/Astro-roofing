@@ -20,12 +20,10 @@ import About from "../components/about-component.astro";
         <App client:load />
         <br />
         <div class="content">
-          <Tile />
-
           <section class="card-container">
             <Card
               title="Reparacion de techos"
-              body="Resolvemos todo tipo de problemas en su techo, desde pequeñas fugas hasta daños mayores."
+              body="Soluciones para todo tipo de problemas en su techo. Se trate de pequeñas filtraciones, reparaciones menores, o daños significativos."
               ico="fix-roof"
             />
             <Card
@@ -44,8 +42,9 @@ import About from "../components/about-component.astro";
               body="Ofrecemos una variedad de materiales y estilos para adaptarnos a sus necesidades y preferencias estéticas."
             />
           </section>
+          <About />
         </div>
-        <About />
+        <Tile />
       </div>
       <Footer />
     </Layout>
@@ -73,7 +72,7 @@ import About from "../components/about-component.astro";
     box-sizing: border-box;
     width: 100%;
     padding: 25px;
-    height: max-content;
+    margin-top: 60px;
   }
 
   @media only screen and (max-width: 768px) {

@@ -30,25 +30,14 @@ const mid = {
   textShadow: "2px 2px rgba(0, 0, 0, 0.3)"
 }
 
-// const bottom = {
-//   textAlign: "start",
-//   fontSize: "x-large",
-//   margin: "0",
-//   color: "#fff",
-//   fontFamily: "Roboto, sans-serif",
-//   paddingLeft: "10px",
-//   textShadow: "3px 3px rgba(0, 0, 0, 0.3)"
-
-// }
-
 const leyend = {
   boxSizing: "border-box",
   zIndex: 4,
   padding: "5px",
   position: "absolute",
   top: "35%",
-  left: "10%",
-  width: "40vw",
+  left: "6%",
+  width: "70vw",
   height: "35em",
 }
 
@@ -86,10 +75,6 @@ const ImageSlider = ({ slides }) => {
         <div style={leyend} >
           <h3 style={top}>BUILDING PROTECTION</h3>
           <h1 style={mid}>Expertos en techos de calidad</h1>
-          {/* <p style={bottom}>
-            Resolvemos cualquier problema con su techo, desde pequeñas fugas hasta daños
-            importantes causados por tormentas. Ya sea que necesite una reparación rápida, 
-            una instalación completa o un servicio de mantenimiento regular.</p> */}
             <button style={contact}>Contact us</button>
         </div>
         <img src={slides[currentIndex].url} alt={`Slide ${currentIndex + 1}`} style={{ height: '100%', width: '100%', objectFit: 'cover', objectPosition: '50% 50%' }}/>
