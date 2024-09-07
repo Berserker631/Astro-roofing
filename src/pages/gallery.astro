@@ -11,91 +11,40 @@ import Layout from "../layouts/Layout.astro";
   </head>
   <body>
     <Layout title="Gallery">
-      <div class="container mx-auto p-4">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="grid gap-4">
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="../gallery/1.jpg"
-                alt=""
-              />
+      <div class="container">
+        <div class="photo-gallery">
+          <div class="column">
+            <div class="photo">
+              <img src="../gallery/1.jpg" alt="" />
             </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="../gallery/2.jpeg"
-                alt=""
-              />
+            <div class="photo">
+              <img src="../gallery/5.jpeg" alt="" />
             </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="../gallery/3.jpeg"
-                alt=""
-              />
+            <div class="photo">
+              <img src="../gallery/7.jpeg" alt="" />
             </div>
           </div>
-          <div class="grid gap-4">
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="../gallery/4.jpeg"
-                alt=""
-              />
+          <div class="column">
+            <div class="photo">
+              <img src="../gallery/4.jpeg" alt="" />
             </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="../gallery/5.jpeg"
-                alt=""
-              />
+            <div class="photo">
+              <img src="../gallery/2.jpeg" alt="" />
             </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="../gallery/6.jpeg"
-                alt=""
-              />
+            <div class="photo">
+              <img src="../gallery/6.jpeg" alt="" />
             </div>
           </div>
-          <div class="grid gap-4">
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="../gallery/7.jpg"
-                alt=""
-              />
+
+          <div class="column">
+            <div class="photo">
+              <img src="../gallery/3.jpeg" alt="" />
             </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="../gallery/8.jpeg"
-                alt=""
-              />
+            <div class="photo">
+              <img src="../gallery/8.jpeg" alt="" />
             </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="../gallery/9.jpeg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="grid gap-4">
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="../gallery/10.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="../gallery/11.jpeg"
-                alt=""
-              />
+            <div class="photo">
+              <img src="../gallery/9.jpeg" alt="" />
             </div>
           </div>
         </div>
@@ -103,3 +52,41 @@ import Layout from "../layouts/Layout.astro";
     </Layout>
   </body>
 </html>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    max-width: 1224px;
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+  }
+
+  .photo-gallery {
+    display: flex;
+    gap: 20px;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .photo img {
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .photo-gallery {
+      flex-direction: column;
+    }
+  }
+</style>

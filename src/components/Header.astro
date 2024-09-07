@@ -92,9 +92,12 @@
     class="px-2 flex box-border md:h-[80px] h-[50px] flex-row justify-between font-bold items-center"
   >
     <img
-      class="bject-cover md:h-12 h-8"
+      class="bject-cover md:h-12 h-8 cursor-pointer"
+      id="logo"
       src="./logo/roofing-lg.png"
       alt="logo"
+      location.href="pageurl.html"
+      ;
     />
     <div class="menu">
       <a class="nav-button" href="/">
@@ -185,9 +188,9 @@
 </style>
 
 <script>
-  let active = false;
   const hamburguer = document.querySelector(".hamburguer");
   const menu = document.querySelector(".menu");
+  const logo = document.getElementById("logo");
 
   hamburguer?.addEventListener("click", () => {
     if (!hamburguer.classList.contains("active")) {
@@ -197,6 +200,10 @@
       hamburguer.classList.remove("active");
       menu!.classList.remove("active");
     }
+  });
+
+  logo?.addEventListener("click", () => {
+    window.location.href = "/";
   });
 
   window.addEventListener("scroll", function () {
