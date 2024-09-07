@@ -86,12 +86,16 @@
 
 <header
   id="header"
-  class="md:max-h-[80px] max-h-[50px] w-full relative z-50 top-0 left-0 [transition:.2s_all_ease-in-out]"
+  class="md:max-h-[80px] bg-[#606060] md:bg-[#313131] max-h-[50px] w-full relative z-50 top-0 left-0 [transition:.2s_all_ease-in-out]"
 >
   <nav
     class="px-2 flex box-border md:h-[80px] h-[50px] flex-row justify-between font-bold items-center"
   >
-    <img class="bject-cover h-12" src="./logo/roofing-lg.png" alt="logo" />
+    <img
+      class="bject-cover md:h-12 h-8"
+      src="./logo/roofing-lg.png"
+      alt="logo"
+    />
     <div class="menu">
       <a class="nav-button" href="/">
         <span>Home</span>
@@ -141,7 +145,7 @@
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(255, 255, 255);
   }
 
   @media (max-width: 768px) {
@@ -181,12 +185,18 @@
 </style>
 
 <script>
+  let active = false;
   const hamburguer = document.querySelector(".hamburguer");
   const menu = document.querySelector(".menu");
 
   hamburguer?.addEventListener("click", () => {
-    hamburguer.classList.add("active");
-    menu!.classList.add("active");
+    if (!hamburguer.classList.contains("active")) {
+      hamburguer.classList.add("active");
+      menu!.classList.add("active");
+    } else {
+      hamburguer.classList.remove("active");
+      menu!.classList.remove("active");
+    }
   });
 
   window.addEventListener("scroll", function () {

@@ -19,8 +19,12 @@ import About from "../components/about-component.astro";
       <div class="wrapper">
         <App client:load />
         <br />
+        <About />
+
         <div class="content">
-          <section class="card-container">
+          <section
+            class="flex items-center sm:flex-row content-around w-full p-6 mt-10 flex-col"
+          >
             <Card
               title="Reparacion de techos"
               body="Soluciones para todo tipo de problemas en su techo. Se trate de pequeñas filtraciones, reparaciones menores, o daños significativos."
@@ -42,7 +46,6 @@ import About from "../components/about-component.astro";
               body="Ofrecemos una variedad de materiales y estilos para adaptarnos a sus necesidades y preferencias estéticas."
             />
           </section>
-          <About />
         </div>
         <Tile />
       </div>
@@ -62,24 +65,5 @@ import About from "../components/about-component.astro";
 
   .wrapper .content {
     padding: 0 25px;
-  }
-
-  .card-container {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 25px;
-    margin-top: 60px;
-  }
-
-  @media only screen and (max-width: 768px) {
-    .card-container {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
   }
 </style>

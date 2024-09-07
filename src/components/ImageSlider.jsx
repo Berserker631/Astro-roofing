@@ -38,6 +38,7 @@ const leyend = {
   top: "35%",
   left: "6%",
   width: "70vw",
+  maxWidth: "65%",
   height: "35em",
 }
 
@@ -74,7 +75,7 @@ const ImageSlider = ({ slides }) => {
     <div style={sliderStyles}>
         <div style={leyend} >
           <h3 style={top}>BUILDING PROTECTION</h3>
-          <h1 style={mid}>Expertos en techos de calidad</h1>
+          <h1 style={mid}>Expertos en <br /> techos de calidad</h1>
             <button style={contact}>Contact us</button>
         </div>
         <img src={slides[currentIndex].url} alt={`Slide ${currentIndex + 1}`} style={{ height: '100%', width: '100%', objectFit: 'cover', objectPosition: '50% 50%' }}/>
